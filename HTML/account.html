@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ad26201953.js" crossorigin="anonymous"></script>
+    <title>ბავშვთა სამყარო - პროდქტი| საფინალო პროექტი</title>
+</head>
+
+<body>
+    <div style="background: radial-gradient(#fff, #ffd6d6);">
+        <div class="conteiner">
+            <div class="navbar">
+                <div class="logo">
+                    <!-- <a href="../HTML/index.html"> <img src="../IMG/LOGO.png" alt="logo" width="125px"></a> -->
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+
+                        <li> <a href="../HTML/index.html">სახლი</a></li>
+                        <!-- <li> <a href="../HTML/product.html">კატალოგი</a></li> -->
+                        <li> <a href="">ჩვენს შესახებ</a></li>
+                        <li> <a href="">კონტაქტი</a></li>
+                        <!-- <li> <a href="">ჩემი პროფილი</a></li> -->
+
+
+                    </ul>
+                </nav>
+                <!-- <a href="../HTML/cart.html"><img src="../IMG/cart.png" alt="cartImg" width="30px" height="30px"></a> -->
+                <img class="menu-icon" onclick="menutoggle()" src="../IMG/menu.png" alt="cartImg">
+            </div>
+
+        </div>
+    </div>
+    <!-- პროფილის და რეგისტრაციის ველები -->
+    <div class="account-page">
+        <div class="conteiner">
+            <div class="row">
+                <div class="col-2">
+                    <img src="../IMG/LOGO.png" alt="logo" width="100%">
+                </div>
+                <div class="col-2">
+                    <div class="form-conteiner">
+                        <div class="form-btn">
+                            <span onclick="login()">ავტორიზაცია</span>
+                            <span onclick="register()">რეგისტრაცია</span>
+                            <hr id="Indicator">
+                        </div>
+                        <form action="" method="POST" id="LoginForm">
+                            <input type="text" name="username1" placeholder="მომხმარებლის სახელი">
+                            <div class="error-text" id="error_username1"></div>
+                            <input type="password" name="password1" placeholder="პაროლი">
+                            <div class="error-text" id="error_password1"></div>
+                            <button type="submit" class="btn">ავტორიზაცია</button>
+                            <a href="">პაროლის აღდგენა</a>
+                        </form>
+                        <form action="" method="POST" id="RegForm">
+                            <input type="text" name="username" placeholder="მომხმარებლის სახელი">
+                            <div class="error-text" id="error-username"></div>
+                            <input type="text" name="email" placeholder="Email">
+                            <div class="error-text" id="error-email"></div>
+                            <input type="password" name="password" placeholder="პაროლი">
+                            <div class="error-text" id="error-password"></div>
+                            <input type="password" name="passwordCheck" placeholder="გაიმეორეთ პაროლი">
+                            <div class="error-text" id="error-passwordCheck"></div>
+                            <!-- <div style="display: flex;">
+                                <input type="radio" name="gender">
+                                <label for="">მამრ.</label>
+                                <input type="radio" name="gender">
+                                <label for="">მდედ.</label>
+                            </div> -->
+                            <button type="submit" class="btn">რეგისტრაცია</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------Footer--------------- -->
+    <div class="footer">
+        <div class="conteiner">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3 style="font-size: xx-large;">აპლიკაციის გადმოწერა</h3>
+                    <p>გადმოწერეთ აპლიკაცია Android-ისა და IOS სისტემებისათვის</p>
+                    <div class="app-logo">
+                        <img src="../IMG/play-store.png" alt="Play-store">
+                        <img src="../IMG/app-store.png" alt="App-store">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="../IMG/LOGO.png" alt="img">
+                    <p>საიტის მიზანია გაგიმარტივოთ არჩევნის გაკეთება და შინიდან გაუსვლელად შეძლოთ ბავშვისთვის სიურპრიზის გაკეთება</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>საჭირო ლინკები</h3>
+                    <ul>
+                        <li>კუპონები</li>
+                        <li>ბლოგი</li>
+                        <li>დაბრუნების პოლიტიკა</li>
+                        <li>შეერთების პრივილეგიები</li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h3>შემოგვიერთდით</h3>
+                    <ul>
+                        <li>FaceBook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">© 2010-2021 Toyes.GE </p>
+            <p style="font-size: xx-small;">Powered by: Geopay</p>
+        </div>
+    </div>
+    <!-- ----------------JS-------------------- -->
+    <script src="../validation.js"></script>
+</body>
+
+</html>

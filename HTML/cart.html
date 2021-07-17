@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ad26201953.js" crossorigin="anonymous"></script>
+    <title>ბავშვთა სამყარო - პროდქტი| საფინალო პროექტი</title>
+</head>
+
+<body>
+    <div class="conteiner">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"> <img src="../IMG/LOGO.png" alt="logo" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+
+                    <li> <a href="index.html">სახლი</a></li>
+                    <li> <a href="product.html">კატალოგი</a></li>
+                    <li> <a href="">ჩვენს შესახებ</a></li>
+                    <li> <a href="">კონტაქტი</a></li>
+                    <li> <a href="account.html">ჩემი პროფილი</a></li>
+
+
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="../IMG/cart.png" alt="cartImg" width="30px" height="30px"></a>
+            <img class="menu-icon" onclick="menutoggle()" src="../IMG/menu.png" alt="cartImg">
+        </div>
+
+    </div>
+    <!-- --------------------კალათის დეტალები----------------- -->
+    <div class="small-conteiner cart-page">
+        <table>
+            <tr>
+                <th>პროდუქტი</th>
+                <th>რაოდენობა</th>
+                <th>ჯამში</th>
+
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="../IMG/category-2.png" alt="img">
+                        <div>
+                            <p>საბავშვო ეტლი შავი</p>
+                            <small>ფასი: 219.99₾</small>
+                            <br>
+                            <a href="">წაშლა</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>219.00₾</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="../IMG/Rubik's_cube.svg.png" alt="img">
+                        <div>
+                            <p>რუბიკის კუბიკი</p>
+                            <small>ფასი: 15.50₾</small>
+                            <br>
+                            <a href="">წაშლა</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>15.50₾</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="../IMG/offers/auzi5.png" alt="img">
+                        <div>
+                            <p>დიდი აუზი კიბით</p>
+                            <small>ფასი: 2 215.99₾</small>
+                            <br>
+                            <a href="">წაშლა</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>2 215.99₾</td>
+            </tr>
+        </table>
+        <div class="total-price">
+            <table>
+                <tr>
+                    <td>ღირებულება</td>
+                    <td>2 450.49₾</td>
+                </tr>
+                <tr>
+                    <td>საკომისიო</td>
+                    <td>50₾</td>
+                </tr>
+                <tr>
+                    <td>ჯამური ღირებულება</td>
+                    <td>2 500.49₾</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- ------------Footer--------------- -->
+    <div class="footer">
+        <div class="conteiner">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3 style="font-size: xx-large;">აპლიკაციის გადმოწერა</h3>
+                    <p>გადმოწერეთ აპლიკაცია Android-ისა და IOS სისტემებისათვის</p>
+                    <div class="app-logo">
+                        <img src="../IMG/play-store.png" alt="Play-store">
+                        <img src="../IMG/app-store.png" alt="App-store">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="../IMG/LOGO.png" alt="img">
+                    <p>საიტის მიზანია გაგიმარტივოთ არჩევნის გაკეთება და შინიდან გაუსვლელად შეძლოთ ბავშვისთვის სიურპრიზის გაკეთება</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>საჭირო ლინკები</h3>
+                    <ul>
+                        <li>კუპონები</li>
+                        <li>ბლოგი</li>
+                        <li>დაბრუნების პოლიტიკა</li>
+                        <li>შეერთების პრივილეგიები</li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h3>შემოგვიერთდით</h3>
+                    <ul>
+                        <li>FaceBook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">© 2010-2021 Toyes.GE </p>
+            <p style="font-size: xx-small;">Powered by: Geopay</p>
+        </div>
+    </div>
+    <!-- ----------------JS-------------------- -->
+    <script src="../script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/styleForReg.css">
+    <title>Ajax</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="testimonial1">
+        <div class="small-conteiner">
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <div class="user-page">
+                        <h1 style="font-size: xx-large; font-weight: bold;">რეგისტრირებული მომხმარებლები</h1>
+                        <div id="api">
+                            <ul id="list">
+                            </ul>
+                        </div>
+                        <button class="btn" id="prev"> წინა გვერდი &#8594;</button>
+                        <button class="btn" id="next"> შემდეგი გვერდი &#8594;</button>
+                    </div>
+                    <a href="index.html"><button class="btn">მთავარ გვერდზე დაბრუნება  &#8594;</button></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        let currentPage = 1;
+        let totalPages;
+
+
+        function getUsers(page) {
+
+            function render() {
+                let response = this.responseText;
+                let responseData = JSON.parse(response);
+
+                var fragment = document.createDocumentFragment();
+
+                responseData.data.forEach(item => {
+                    let li = document.createElement('li');
+                    li.setAttribute('class', 'listli');
+
+                    let span = document.createElement('span');
+                    span.textContent = item.first_name + ' ' + item.last_name;
+
+                    let img = document.createElement('img');
+                    img.src = item.avatar;
+                    img.setAttribute('alt', 'user-image');
+
+                    li.appendChild(img);
+                    li.appendChild(span);
+
+                    fragment.appendChild(li);
+                });
+                document.getElementById('list').innerHTML = ' ';
+                document.getElementById('list').appendChild(fragment);
+
+                totalPages = responseData.total_pages;
+            }
+
+
+
+            let requist = new XMLHttpRequest();
+            requist.addEventListener('load', render);
+            requist.open('GET', 'https://reqres.in/api/users?page=' + page);
+            requist.send();
+
+        }
+
+
+
+        document.getElementById('prev').addEventListener('click', function() {
+            if (currentPage === 1) {
+                return;
+            }
+            currentPage -= 1;
+            getUsers(currentPage);
+        })
+
+        document.getElementById('next').addEventListener('click', function() {
+            if (currentPage === totalPages) {
+                return;
+            }
+            currentPage += 1;
+            getUsers(currentPage);
+        })
+
+
+        getUsers();
+    </script>
+
+</body>
+
+</html>
